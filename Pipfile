@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-telegrambot = "*"
+requests = "*"
+channels = "*"
+django-crispy-forms = "*"
+
+[dev-packages]
+ipython = "*"
+
+[requires]
+python_version = "3.9"

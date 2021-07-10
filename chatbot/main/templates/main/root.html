@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+{% block contents %}
+<div class="container">
+    <h1>Available routs</h1>
+    <hr>
+    <a href="{% url 'chat' %}">See chat with websocket</a><br>
+    <a href="{% url 'response_count' %}">See calls to each jokes</a><br>
+    <a href="{% url 'signin' %}">signin</a><br>
+    <a href="{% url 'signup' %}">signup</a><br>
+    <span>Webhook should route to:- {% url 'webhook' %}</span><br>
+</div>
+{% endblock contents %}

@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% block contents %}
+<div class="container">
+    <h1>Number of calls to each Jokes and respective users</h1>
+    <hr>
+    <div class="row">
+        {% for item in object_list %}
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <span>Username: {{ item.username }}</span>
+                <span>jokes read</span>
+                <p>Fat: {{item.fat_count}}</p>
+                <p>dumb: {{item.dumb_count}}</p>
+                <p>stupid: {{item.stupid_count}}</p>
+            </div>
+        </div>
+        <hr>
+        {% empty %}
+        <h1>noone used your bot</h1>
+        {% endfor %}
+    </div>
+</div>
+{% endblock contents %}
