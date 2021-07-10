@@ -1,5 +1,9 @@
 from pathlib import Path
 
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -133,7 +137,7 @@ CHANNEL_LAYERS = {
     }
 }
 
-TELEGRAMBOT_ID = '1856635893:AAHuoYnnC-OvQ5W_EtEXi4zPwDN3GtYXX7w'
+TELEGRAMBOT_ID = env('BOT_ID')
 
 LOGIN_URL = '/signin/'
 
